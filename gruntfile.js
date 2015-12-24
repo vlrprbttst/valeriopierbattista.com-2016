@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    require: 'compass'
+                    require: ['compass','susy']
                 },
 
                 files: {
