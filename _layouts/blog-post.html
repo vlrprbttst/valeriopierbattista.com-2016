@@ -2,8 +2,9 @@
 
 <div class="page-container">
 	<div class="sub-container blog blog-post">
-		<h1>Blog</h1>
 		<div class="entry">
+			<h1>{{page.title}}</h1>
+			<span class="date"><i class="fa fa-clock-o"></i> {{ page.date | date: "%m-%d-%Y"}}</span>
 		{{ content }}
 		{% include share.html %}
 		<a href="#" onclick="window.history.back()">Back</a>

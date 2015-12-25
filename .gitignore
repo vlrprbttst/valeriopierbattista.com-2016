@@ -1,3 +1,13 @@
+# =========================
+# My gitignore
+# =========================
+
+.sass-cache
+node_modules
+.project
+.gitattributes
+_site
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -16,11 +26,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-.sass-cache
-node_modules
-.project
-.gitattributes
 
 # =========================
 # Operating System Files

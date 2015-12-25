@@ -10,6 +10,9 @@ paginate_path: "blog/:num"
 permalink: blog/:month-:day-:year/:title.html
 excerpt_separator: <!--more-->
 gems: [jekyll-paginate]
+url: "http://valeriopierbattista.com"
+twitter_username: vlrprbttst
+github_username:  vlrprbttst
 
 defaults:
   -
