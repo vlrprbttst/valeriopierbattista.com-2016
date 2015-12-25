@@ -1,1 +1,14 @@
-$background:#fff; 
+$darkPrimaryColor: #D32F2F;
+$primaryColor: #F44336;
+$lightPrimaryColor: #FFCDD2;
+$textPrimaryColor: #FFFFFF;
+$accentColor: #536DFE;
+$primaryTextColor: #212121;
+$secondaryTextColor: #727272;
+$dividerColor: #B6B6B6;
+$pageBackground: #f9f9f9;
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+@include border-box-sizing;
+$round-to-nearest-half-line: true;

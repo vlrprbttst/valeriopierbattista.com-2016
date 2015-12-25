@@ -1,0 +1,44 @@
+
+
+$socialsize:2em;
+$socialcount:8;
+
+
+
+.social-cont {
+  font-size:$socialsize;
+  text-align: left;
+  margin:0;
+  width:100%;  
+  overflow:auto;
+  text-align: center;
+  
+
+    @include respond-to(48) {
+    @include span(12 of 12); 
+    text-align: center;
+  }
+  
+  .social-box {
+    width: 25%;
+    float:left;
+    overflow:hidden;
+    border-radius:0;
+    margin:0;
+    padding:15px 0;
+
+    
+    a {
+      display:block;
+      width: 100%;
+      height: 100%;
+
+    }
+
+ 
+  }
+  i.social-ico {
+    color:white;
+    
+  }
+}

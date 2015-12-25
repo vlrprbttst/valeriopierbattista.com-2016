@@ -1,10 +1,10 @@
-name: "jekyll"
-description: "first attempt"
+name: "Valerio Pierbattista - Front End Developer"
+description: "Valerio Pierbattista website portfolio"
 source:      ./
 destination: ./_site
 exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images-src,js/libs,js/custom,js/build,readme.md]
 encoding: utf-8
-paginate: 2
+paginate: 10
 paginate_path: "blog/:num"
 permalink: blog/:month-:day-:year/:title.html
 excerpt_separator: <!--more-->
@@ -14,5 +14,6 @@ defaults:
   -
     scope:
       path: "blog"
+      type: "posts"
     values:
-      layout: "posts"
+      layout: "blog-post"

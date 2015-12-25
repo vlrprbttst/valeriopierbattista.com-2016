@@ -1,143 +1,155 @@
 // Gruntfile.js
 module.exports = function(grunt) {
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+	grunt.initConfig({
+		pkg : grunt.file.readJSON('package.json'),
 
-        /*
-         =====================================================================================================================================
-         start of watch
-         =====================================================================================================================================
-         *
-         */
+		/*
+		 =====================================================================================================================================
+		 start of watch
+		 =====================================================================================================================================
+		 *
+		 */
 
-        watch: {
-            content: {
-                files: ['_site/**/*.*'],
-                tasks: ['newer:htmlmin'],
-                options: {
-                    livereload: false,
-                    spawn: false
-                }
-            },
-            images: {
-                files: ['images-src/**/*.*'],
-                tasks: ['newer:imagemin']
-            }, // watch images added to src
-            css: {
-                files: ['sass/**/*.scss'],
-                tasks: ['sass', 'postcss'],
-                options: {
-                    spawn: false,
-                }
-            },
+		watch : {
+			content : {
+				files : ['_site/**/*.*'],
+				tasks : ['newer:htmlmin'],
+				options : {
+					livereload : false,
+					spawn : false
+				}
+			},
+			images : {
+				files : ['images-src/**/*.*'],
+				tasks : ['newer:imagemin']
+			}, // watch images added to src
+			css : {
+				files : ['sass/**/*.scss'],
+				tasks : ['sass', 'postcss'],
+				options : {
+					spawn : false,
+				}
+			},
 
-            scripts: {
-                files: ['js/libs/*.js', 'js/custom/*.js'],
-                tasks: ['concat', 'uglify'],
-                options: {
-                    livereload: true,
-                    spawn: true,
-                }
-            },
-        },
+			scripts : {
+				files : ['js/libs/*.js', 'js/custom/*.js'],
+				tasks : ['concat', 'uglify'],
+				options : {
+					livereload : true,
+					spawn : true,
+				}
+			},
 
-        /*
-         =====================================================================================================================================
-         end of watch
-         =====================================================================================================================================
-         *
-         */
+			scriptsIndex : {
+				files : ['js/index-js/index.js'],
+				tasks : ['uglify:scriptsIndex'],
+				options : {
+					spawn : false,
+				},
+			},
+		},
 
-        sass: {
-            dist: {
-                options: {
-                    require: ['compass','susy']
-                },
+		/*
+		 =====================================================================================================================================
+		 end of watch
+		 =====================================================================================================================================
+		 *
+		 */
 
-                files: {
-                    'css/main.css': ['sass/*.scss', 'sass/partials/*.scss'],
-                    '_site/css/main.css': ['sass/*.scss', 'sass/partials/*.scss']
-                }
-            }
-        }, // sass
+		sass : {
+			dist : {
+				options : {
+					compass : true,
+					require : 'susy',
+				},
 
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true, // Enable dynamic expansion
-                    cwd: 'images-src/', // Src matches are relative to this path
-                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
-                    dest: 'images/' // Destination path prefix
-                }]
-            }
-        }, // imagemin
+				files : {
+					'css/main.css' : ['sass/*.scss', 'sass/partials/*.scss'],
+					'_site/css/main.css' : ['sass/*.scss', 'sass/partials/*.scss']
+				}
+			}
+		}, // sass
 
-        postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require('autoprefixer')({
-                        browsers: 'last 2 version, IE 9'
-                    }), // add vendor prefixes. for more: https://github.com/ai/browserslist
-                    require('cssnano')() // minify the result
-                ]
-            },
-            dist: {
-                src: 'css/main.css'
-            }
-        },
+		imagemin : {
+			dynamic : {
+				files : [{
+					expand : true, // Enable dynamic expansion
+					cwd : 'images-src/', // Src matches are relative to this path
+					src : ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
+					dest : 'images/' // Destination path prefix
+				}]
+			}
+		}, // imagemin
 
-        concat: {
-            dist: {
-                src: ['js/libs/*.js', 'js/custom/*.js'],
-                dest: 'js/build/production.js'
-            }
-        }, // concat
+		postcss : {
+			options : {
+				map : true,
+				processors : [require('autoprefixer')({
+					browsers : 'last 2 version, IE 9'
+				}), // add vendor prefixes. for more: https://github.com/ai/browserslist
+				require('cssnano')() // minify the result
+				]
+			},
+			dist : {
+				src : 'css/main.css'
+			}
+		},
 
-        uglify: {
-            dist: {
-                src: 'js/build/production.js',
-                dest: 'js/production.min.js'
-            }
-        }, // uglify
+		concat : {
+			dist : {
+				src : ['js/libs/*.js', 'js/custom/*.js'],
+				dest : 'js/build/production.js'
+			}
+		}, // concat
 
-        htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true,
-                    collapseWhitespace: true
-                },
-                expand: true,
-                cwd: '_site/',
-                src: ['**/*.html'],
-                dest: '_site/'
-            }
-        }, // htmlmin
+		uglify : {
+			dist : {
+				src : 'js/build/production.js',
+				dest : 'js/production.min.js'
+			},
+			scriptsIndex : {
+				src : 'js/index-js/index.js',
+				dest : 'js/index.min.js'
+			}
+		}, // uglify
 
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src: ['_site/**/*.*']
-                },
-                options: {
-                    proxy: "localhost:4000",
-                    watchTask: true
-                }
-            }
-        } //browserSync
-    });
+		htmlmin : {
+			dist : {
+				options : {
+					removeComments : true,
+					removeRedundantAttributes : true,
+					useShortDoctype : true,
+					collapseWhitespace : true
+				},
+				expand : true,
+				cwd : '_site/',
+				src : ['**/*.html'],
+				dest : '_site/'
+			}
+		}, // htmlmin
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+		browserSync : {
+			dev : {
+				bsFiles : {
+					src : ['_site/**/*.*']
+				},
+				options : {
+					proxy : "localhost:4000",
+					watchTask : true
+				}
+			}
+		} //browserSync
+	});
 
-    grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+
+	grunt.registerTask('default', ['browserSync', 'watch']);
 };

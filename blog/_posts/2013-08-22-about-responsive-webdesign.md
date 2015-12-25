@@ -1,0 +1,39 @@
+<img alt="responsive webdesign" src="/images/blog/responsive-webdesign.png" />
+
+We're hearing a lot about **responsive web** and **responsive web design** lately, but what is it exactly? And why is it so important?  Let's dig deeper and try to make it simple, starting from the beginning, before smartphones and tablets even existed.
+
+Once upon a time, the **web was pixel based**, that meant designing a website to be a certain amount of pixels wide, and hoping the majority of your users had a screen large enough for it to fit in nicely, not too wide to leave too much blank space around it. The common criterion used was to meet popular screen-sizes halfway:  10 years ago for example,  a standard monitor resolution was between 800x600px and 1024x768px, so you'd design a website to be around 960px wide, this way  you were sure 95% of the internet users would see it as it's was supposed to be seen. This is still a widely used method, but as smartphones and tablets started popping out, a fixed width website is not an option anymore, or at least, not recommended.
+<!--more-->
+
+**The internet doesn't sit on a desktop anymore**; a website is now visible from a wide range of different devices: phones, tablets, smart-TVs. The only thing these devices have in common and will always have in common is that they have a screen. We are living in a society full of screens; you are staring at one right now! Screen width varies from device to device, so if the standard doesn't exist anymore, **how "wide" should a design be?** The answer is: there's no answer.
+
+This is where responsive web design comes in handy:
+<blockquote>
+“Responsive web design is a new approach to building websites. It’s about carefully crafting a website to be usable and aesthetically pleasing across a wide range of devices. Responsive websites use a fluid layout that adapts and responds to your user. Meaning that you are able to maintain one website that will serve all of your customers, no matter where or what they are viewing it on. ” [1]
+</blockquote>
+
+What's challenging in RWD is that you have one structure only, a graphic layout and content that need to be **adaptive,** because you don't know what device the user is going to see it from; you hopefully want to provide a frictionless experience, whether on a desktop computer or a mobile device.
+
+**But what does a responsive website look like?** How do you recognize one? While you're browsing <a href="http://www.valeriopierbattista.com" target="_blank">www.valeriopierbattista.com</a> for example, start stretching your browser window horizontally. See how the content adapts to the width of the window and how it reorganizes itself to fit, see how some graphics disappear to leave more space for the content, etc. Play around and spot the differences and see how it "reacts", if you have time, open it directly from your smartphone or tablet.
+
+Ok let's try a NON responsive website now, for example [www.poste.it](http://www.poste.it/). So, you're on a smartphone, you can see the website and it works... then this must be a mobile site! Well, absolutely not. It is just a zoomed out version of the original  [www.poste.it](http://www.poste.it/). You can still visit it, most of the things "work" (depending on your browser and hardware capabilities) but the user experience is a rather low quality: the font size is way too small for you to easily read, you have to zoom in/out and pan around to look for what you need, the website is probably very "heavy" and it already sucked a fair amount of your daily available connection megabytes. This translates to a horrible user experience and a waste of bandwidth. Poste should definitely get the mobile treatment. <b> </b>
+
+<h2>It's not just about the layout</h2> The fascinating thing about RWD is how it forces you to go beyond pure graphics and coding patterns. Let's explore it a bit deeper.
+
+<h2>Content</h2> RWD forces you to accurately understand and think about what content is most important for your user. Imagine being on a bus, you're hungry and you want to find a Chinese restaurant nearby. What's the priority when landing on Mr. Wong's mobile website? You don't care about the photo gallery, some boring intro text, tons of graphics or the complete menu. You maybe just need a phone number for a reservation and an address to easily copy and paste on your Google maps app to get there. This is what a good mobile website delivers: what you really need, quickly. When you're sitting in front of a desktop computer, you have more time and patience to comfortably search at the information. The mobile context is totally different: there's simply not enough space in a 320 by 480 pixel screen for extraneous, unnecessary elements. You need to prioritize.
+
+<h2>Performance</h2> Another big difference between desktop and mobile is bandwidth usage and connection speed. A desktop connection is fast, and you don't mind the quantity of megabytes you are downloading while browsing. A mobile internet connection is slower and it has a daily/monthly limit of usage so you want to be careful about 2 main points: your page weight and the consequent loading speed. Speed does matter, the major search engines measured how much web site slowdowns hurt their business metrics:
+
+
+- [Bing](http://bing.com/) – A page that was 2 seconds slower resulted in a [4.3% drop in revenue/user](http://en.oreilly.com/velocity2009/public/schedule/detail/8523)
+- [Google](http://www.google.com/) – A 400 millisecond delay caused a [0.59% drop in searches/user](http://en.oreilly.com/velocity2009/public/schedule/detail/8523)
+- [Yahoo!](http://www.yahoo.com/) – A 400 milliseconds slowdown resulted in a [5-9% drop in full-page traffic](http://slideshare.net/stoyan/dont-make-me-wait-or-building-highperformance-web-applications) [2]
+
+From a recent study, a user doesn't stay on a mobile page if it takes more than 4 seconds to load. There are a lot of page optimization tricks to make it faster, but I'm not going too technical on this one, because you probably are not interested, and if you are, here is a wonderful little website about the topic: [http://browserdiet.com/](http://browserdiet.com/)
+
+
+<h2>User Experience</h2> "Does this website adds value to my browsing experience? Is it easy to use? Is it pleasant to use?" These are the questions that run through the minds of visitors as they interact with our products, and this is what you should have in mind while designing it. It's about conceptualizing design that matches user expectations and standards of latest UI patterns and components. You may not be an expert of the discipline, but you can try. "Designing user experiences for the mobile web is challenging. Designers need to account for the enormous variance of capabilities and features of mobile devices. More importantly, they need to help users achieve goals in a hard-to-define mobile context." [3] Food for thought ... Does it really matter to create a responsive/mobile-friendly version of your website? The answer is YES, simply because that's where the future of the internet. We, as designers, are responsible to make the web move forward; we need to be "adaptive" as much as the context we work in, and think in a "[future-friendly](http://futurefriend.ly/)" way.
+
+[1] <a href="http://www.pshift.com/blog/109-what-is-a-responsive-website-and-why-is-it-the-most-important-thing-for-your-business" target="_blank">http://www.pshift.com/blog/109-what-is-a-responsive-website-and-why-is-it-the-most-important-thing-for-your-business</a><br>
+[2] <a href="http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/" target="_blank">http://www.stevesouders.com/blog/2010/05/07/wpo-web-performance-optimization/</a><br>
+[3] <a href="http://mobilewebbestpractices.com/" target="_blank">http://mobilewebbestpractices.com/</a>

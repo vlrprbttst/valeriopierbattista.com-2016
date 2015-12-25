@@ -1,0 +1,181 @@
+<!DOCTYPE html><!--[if IE 9]><html lang="en" class="ie ie9"><![endif]--><!--[if lt IE 9]><html lang="en" class="ie ie-legacy"><![endif]--><html lang="en"><head><meta charset="utf-8"><title>Valerio Pierbattista - Front End Web Developer</title><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><meta name="description" content="Valerio Pierbattista - Front End Web Developer from Rome, Italy.
+		I love simple and functional interfaces optimized for anything that can access the web."><link href="http://fonts.googleapis.com/css?family=Source+Code+Pro|Merriweather:400,700" rel="stylesheet" type="text/css"><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link href="/css/main.css" rel="stylesheet" type="text/css"><meta property="og:title" content="Valerio Pierbattista - Front End Web Developer"><meta property="og:type" content="website"><meta property="og:url" content="http://www.valeriopierbattista.com"><meta property="og:image" content="http://www.valeriopierbattista.com/images/dist/facebook-image.png"><meta property="og:description" content="Front End Web Developer from Rome, Italy. I love simple and functional interfaces optimized for anything that can access the web."><meta property="og:site_name" content="http://valeriopierbattista.com/"><meta http-equiv="content-language" content="EN"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]--></head><body class="container"><div id="info_cookie" style="display:none" class="cookie-hidden">Questo sito raccoglie dati statistici anonimi sulla navigazione, mediante cookie installati da terze parti autorizzate, rispettando la privacy dei tuoi dati personali e secondo le norme previste dalla legge. Continuando a navigare su questo sito accetti il servizio e gli stessi cookie.<br><div class="ok-cookie cookie-btn"><i class="fa fa-thumbs-up"></i> ok</div><div class="cookie-policy cookie-btn"><a href="cookies.php">cookie policy</a></div></div><div class="this-sidebar"><i id="bars" class="fa fa-bars"></i><div class="sub-container-sidebar"><section itemscope itemtype="http://data-vocabulary.org/Person"><span itemprop="name" class="name">Valerio Pierbattista</span><br><span itemprop="title" class="job"><code>Front end web developer</code></span></section></div><nav class="nav"><ul><li><a href="/index.html"><i class="fa fa-user"></i> About</a></li><li><a href="/work.html"><i class="fa fa-code"></i> Work</a></li><li><a href="/blog"><i class="fa fa-pencil"></i> Blog</a></li><li><a href="/contact.html"><i class="fa fa-send-o"></i> Contact</a></li></ul></nav></div><div class="page-container"><div class="sub-container blog blog-post"><h1>Blog</h1><div class="entry"><p><img src="/images/blog/grunt-logo.svg" alt="grunt-logo"> This is a grunt boilerplate I developed and assembled for my needs. I’ve been looking around for something like this but couldn’t find it, that’s why I decided to share my achievement on my blog. If it’s your first read about grunt, please read this first instead: <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">http://24ways.org/2013/grunt-is-not-weird-and-hard/</a> - this is a quite comprehensive guide on how to get started, what to install before using grunt on your machine, and it’s useful for the overall understanding of the basic concepts. I strongly recommend to start with that article before further reading. Once you’ve read and understood the basics, I’m supposing you have a general idea of what grunt does and how you feel like that article doesn’t cover everything you need. you clearly want more. Here’s my two cents:</p><h2>My boilerplate</h2><p>My Grunt Boilerplate does the following things:</p><p>1) watches and live reloads html, javascript, css and syncs your project across multiple browsers and devices (live)<br>2) concatenates javascript files into a single minified production file<br>3) process <code class="language-markup">.scss</code>  with compass support and <code class="language-markup">autoprefixer</code><br>4) minifies images from a source folder to a compressed folder keeping them in sync<br>This boilerplate works with the following <strong>dependencies</strong> and <strong>modules</strong> (saved locally on the project folder):</p><pre class="language-markup">
+<code class="language-markup">
+"grunt": "~0.4.1",
+"grunt-autoprefixer": "~1.0.0",
+"grunt-browser-sync": "^1.3.6",
+"grunt-contrib-concat": "~0.5.0",
+"grunt-contrib-imagemin": "^0.8.1",
+"grunt-contrib-sass": "~0.7.4",
+"grunt-contrib-uglify": "~0.5.1",
+"grunt-contrib-watch": "~0.6.1",
+"grunt-delete-sync": "0.0.2",
+"grunt-newer": "^0.7.0"</code></pre><h2>What this boilerplate does</h2><p><span style="text-decoration: underline">It watches and live reloads html, javascript, css and syncs your project across multiple browsers and devices</span><br><br>This is done with the <a href="http://www.browsersync.io/">BrowserSync</a> plugin, which is a really great grunt feature. Aside from live reloading your assets, you will be able to access your project using an IP address on your mobile devices, making your workflow faster by synchronising URLs, interactions (scroll and text inputs for example) and code changes across multiple devices. This is crazy useful when working on responsive websites.</p><p><span style="text-decoration: underline">It concatenates javascript files into a single minified production file</span><br><br>I have structured my JS folder like this:</p><pre class="language-markup"><code class="language-markup">js
+|-- libs
+   + plugin.js
+|-- custom
+   + main.js
+|-- build
+   + production.js
+   + production.min.js</code></pre><ul><li>the “<strong>libs</strong>” folder contains the  <code class="language-markup">js</code>  files for plugins or libraries or whatever</li><li>the “<strong>custom</strong>” folder contains one or more  <code class="language-markup">js</code>  file with my custom scripts</li><li>the “<strong>production</strong>” folder contains both the  <code class="language-markup">production.js</code>  (the file where grunt injects all the javascripts) and the  <code class="language-markup">production.min.js</code>  (same file but minified that we will load up for use in our index.html file). Grunt will watch both “<strong>libs</strong>” and “<strong>custom</strong>”, concatenate the content into <code class="language-markup">production.js</code> and then minify it creating or updating <code class="language-markup">production.min.js</code> .</li></ul><p><span style="text-decoration: underline">Sass processing with compass and autoprefixer</span><br><br>If you never heard of Sass it’s time to catch up! You can read about it in my other <a href="http://valeriopierbattista.com/blog/using-sass-and-compass-how-to-set-up-your-work-environment-and-your-project-folders-for-windows/">blog post</a>. This grunt boilerplate processes  <code class="language-markup">sass</code>  into  <code class="language-markup">main.css</code>  located in the “<strong>css</strong>” folder and then applies <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to the result. <strong>Compass</strong> is supported. If you want to edit the output format or add sass plugins in the mix, you can do it directly  in the  <code class="language-markup">gruntfile.js</code>  :</p><pre class="language-javascript">
+<code class="language-javascript">
+sass : {
+dist : {
+options : {
+style : 'compressed', //no need for config.rb
+compass : 'true', //no need to @import compass
+// require : 'sassy-buttons' // plugins if needed!
+},
+files : {
+'css/main.css' : 'sass/main.scss'
+}
+}
+}, //end of sass
+</code></pre><p><span style="text-decoration: underline">Image compression</span><br><br>I’ve created two separate folders for this task: - <strong>src</strong>: contains the uncompressed images you save from photoshop - <strong>dist</strong>: contains the compressed images (the ones you will link to in your project) Every time you save an image in the <strong>src</strong> folder (or in its subfolders), it will be compressed and saved in the <strong>dist</strong> folder. This will occur only when you add a new image to the <strong>src</strong> folder and only the <a href="https://github.com/tschaub/grunt-newer">newer</a> image will be compressed. What if you don’t need an image anymore? Just <a href="https://github.com/taylorcode/grunt-delete-sync">delete it</a> from the src folder and the dist folder will be updated accordingly. <strong>WARNING</strong>: if you start your project with an empty src folder, imagemin may not trigger. Hit  <code class="language-markup">ctrl+c</code>  then type <code class="language-markup">Y</code> to exit grunt. Type <code class="language-markup">grunt imagemin</code> . This will trigger imagemin which will compress the first image you created. Now type  <code class="language-markup">grunt</code> again and go back to your normal workflow, imagemin should trigger as expected from now on.</p><h2>The final gruntfile.js</h2><p>Here it is:</p><pre class="language-javascript">
+	<code class="language-javascript">
+// This shows a full config file!
+module.exports = function(grunt) {
+
+	grunt.initConfig({
+		pkg : grunt.file.readJSON('package.json'),
+
+		watch : {
+			content : {
+				files : '*.html'
+			}, //this live reloads html also
+
+			images : {
+				files : ['images/src/*.{png,jpg,gif}'],
+				tasks : ['newer:imagemin']
+			}, /* watch images added to src */
+
+			deleting : {
+				files : ['images/src/*.{png,jpg,gif}'],
+				tasks : ['delete_sync']
+			}, /* end of delete sync*/
+
+			scripts : {
+				files : ['js/libs/*.js', 'js/custom/*.js'],
+				tasks : ['concat', 'uglify'],
+				options : {
+					spawn : false,
+				},
+			}, /*end of watch scripts*/
+
+			css : {
+				files : ['sass/**/*.scss'],
+				tasks : ['sass', 'autoprefixer'],
+				options : {
+					spawn : false,
+				}
+			}, /*end of sass watch*/
+
+		}, //end of watch
+
+		/* ====================================================================================================================================================
+		 * ====================================================================================================================================================
+
+		 Tasks
+
+		 ====================================================================================================================================================
+		 ====================================================================================================================================================
+		 */
+
+		delete_sync : {
+			dist : {
+				cwd : 'images/dist',
+				src : ['**'],
+				syncWith : 'images/src'
+			}
+		}, // end of delete sync
+
+		imagemin : {
+			dynamic : {
+				files : [{
+					expand : true, // Enable dynamic expansion
+					cwd : 'images/src/', // source images (not compressed)
+					src : ['**/*.{png,jpg,gif}'], // Actual patterns to match
+					dest : 'images/dist/' // Destination of compressed files
+				}]
+			}
+		}, //end imagemin
+
+		concat : {
+			dist : {
+				src : ['js/libs/*.js', 'js/custom/*.js'],
+				dest : 'js/build/production.js'
+			}
+		}, //end concat
+
+		uglify : {
+			dist : {
+				src : 'js/build/production.js',
+				dest : 'js/build/production.min.js'
+			}
+		}, //end uglify
+
+		sass : {
+			dist : {
+				options : {
+					style : 'compressed', //no need for config.rb
+					compass : 'true', //no need to @import compass
+					// require : 'sassy-buttons' // plugins if needed!
+				},
+				files : {
+					'css/main.css' : 'sass/main.scss'
+				}
+			}
+		}, //end of sass
+
+		autoprefixer : {
+
+			options : {
+
+				browsers : ['&gt; 5%', 'last 2 version', 'ie 8', 'ie 9']
+			},
+
+			dist : {
+				files : {
+					'css/main.css' : 'css/main.css'
+				}
+
+			}
+		}, //end of autoprefixer
+
+		browserSync : {
+			dev : {
+				bsFiles : {
+					src : ['css/*.css', 'images/*.*', 'js/build/production.min.js', '*.html']
+				},
+				options : {
+					server : {
+						baseDir : "./"
+
+					},
+					watchTask : true // &lt; VERY important
+				}
+			}
+		}
+	});
+
+	// load npm tasks
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-delete-sync');
+
+	// define default task
+	grunt.registerTask('default', ["browserSync", "watch"]);
+};</code></pre><p>you can either build the boilerplate from scratch or you can simply <a href="https://github.com/vlrprbttst/grunt-boilerplate" target="_blank">clone it from <i class="fa fa-github"></i> github!</a></p><p>enjoy!</p><p class="sharethis">Share this:</p><div class="social-cont"><div class="social-box facebook"><a href="https://facebook.com/sharer.php?u=/blog/09-06-2014/Grunt-Boilerplate-for-Front-End-Developers-and-Webdesigners.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa social-ico fa-facebook"></i></a></div><div class="social-box twitter"><a href="https://twitter.com/intent/tweet?text=Grunt Boilerplate For Front End Developers And Webdesigners&url=/blog/09-06-2014/Grunt-Boilerplate-for-Front-End-Developers-and-Webdesigners.html&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa social-ico fa-twitter"></i></a></div><div class="social-box linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=/blog/09-06-2014/Grunt-Boilerplate-for-Front-End-Developers-and-Webdesigners.html&title=Grunt Boilerplate For Front End Developers And Webdesigners&source=" target="_blank"><i class="fa social-ico fa-linkedin"></i></a></div></div></div></div></div><footer class="footer"><div class="sub-container-sidebar"><div class="site-info">Hand-Coded with <i class="fa fa-heart"></i> in Rome (Italy) using <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, <a href="http://sass-lang.com/" target="_blank">Sass</a>, <a href="http://compass-style.org/" target="_blank">Compass</a>, <a href="http://jquery.com/" target="_blank">jQuery</a>, <a href="http://susy.oddbird.net/" target="_blank">Susy</a> and <a href="http://gruntjs.com/" target="_blank">Grunt</a>. // <a href="/cookies.html">Privacy and Cookie Policy</a></div><div class="footer-sep"></div><div class="social-cont"><div class="social-box email"><a href="mailto:omegaiori@gmail.com" target="_blank"><i class="fa social-ico fa-envelope"></i></a></div><div class="social-box twitter"><a href="https://twitter.com/vlrprbttst" target="_blank"><i class="fa social-ico fa-twitter"></i></a></div><div class="social-box youtube"><a href="https://www.youtube.com/user/valeriopierbattista" target="_blank"><i class="fa social-ico fa-youtube"></i></a></div><div class="social-box instagram"><a href="http://instagram.com/vlrprbttst" target="_blank"><i class="fa social-ico fa-instagram"></i></a></div><div class="social-box linkedin"><a href="https://www.linkedin.com/profile/view?trk=tab_pro&id=92711655" target="_blank"><i class="fa social-ico fa-linkedin"></i></a></div><div class="social-box github"><a href="http://github.com/vlrprbttst" target="_blank"><i class="fa social-ico fa-github"></i></a></div><div class="social-box codepen"><a href="http://codepen.io/vlrprbttst" target="_blank"><i class="fa social-ico fa-codepen"></i></a></div><div class="social-box cv"><a href="http://valeriopierbattista.com/cv" target="_blank"><i class="fa social-ico fa-file-text-o"></i></a></div></div></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42737159-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');</script><script src="/js/production.min.js"></script></body></html>
