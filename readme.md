@@ -2,6 +2,8 @@
 
 Porting from the old website to Jekyll.
 
+Hand-Coded with :heart: in Rome (Italy) using Jekyll, Sass, Compass, jQuery, Susy and Grunt.
+
 ## Requirements
 You'll need to have the following items installed before continuing.
 
@@ -11,7 +13,7 @@ You'll need to have the following items installed before continuing.
 ## Dependencies
 
 ### Gems
-The gems used in this project are Sass and Compass, type these in the terminal anywhere:
+Type these in the terminal anywhere:
 
 `gem install sass`
 
