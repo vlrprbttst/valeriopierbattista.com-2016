@@ -8,6 +8,7 @@
       padding: rhythm(1);
     }
     @include respond-to(30) {
+      margin-top: span(.5);
       padding: rhythm(.5);
     }
   }
