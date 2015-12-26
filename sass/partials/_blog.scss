@@ -32,10 +32,10 @@
     color: $dividerColor;
     font-family: 'Source Code Pro';
   }
-  $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6 );
+  $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6, gplus:#D14836 );
   $socialsize: 2.6rem;
   $socialmargin: 0.4rem;
-  $socialcount: 3;
+  $socialcount: 4;
   @function makelongshadow($the-color) {
     $val: 0 0 $the-color;
     @for $i from 1 through 50 {
@@ -62,6 +62,7 @@
     text-align: left;
     width: ($socialsize * 1.5) * ($socialcount) + ($socialmargin * $socialcount * 2) - ($socialmargin * 2);
     overflow: auto;
+    margin-bottom: 40px;
     .social-box {
       float: left;
       overflow: hidden;
@@ -69,7 +70,7 @@
       margin: 0 $socialmargin;
       width: $socialsize*1.5;
       height: $socialsize*1.5;
-      padding:0;
+      padding: 0;
       a {
         display: block;
         width: 100%;
@@ -88,8 +89,46 @@
     }
     i.social-ico {
       color: white;
-
     }
+  }
+  .pagination {
+    text-align: center;
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul {
+      display: inline-block;
+      overflow: auto;
+      margin-bottom: rhythm(1);
+      @include adjust-font-size-to(20px,1);
+    }
+    li {
+      float: left;
+      margin: 0 10px;
+      font-family: 'Source Code Pro';
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      .disabled {
+        color: $secondaryTextColor;
+      }
+      .active {
+        background: $darkPrimaryColor;
+        color: $textPrimaryColor;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .back-btn {
+    margin-bottom: rhythm(1);
+    display: inline-block;
   }
 }
 // blog

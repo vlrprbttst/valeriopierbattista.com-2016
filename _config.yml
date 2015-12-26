@@ -2,12 +2,12 @@ name: "Valerio Pierbattista - Front End Developer"
 description: "Valerio Pierbattista website portfolio"
 source:      ./
 destination: ./_site
-exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images-src,js/libs,js/custom,js/build,readme.md]
+exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images-src,js/libs,js/custom,js/build,readme.md,.ftppass]
 encoding: utf-8
 paginate: 10
-incremental: true
+incremental: false
 paginate_path: "blog/:num"
-permalink: blog/:month-:day-:year/:title.html
+permalink: blog/:title/
 excerpt_separator: <!--more-->
 gems: [jekyll-paginate]
 url: "http://valeriopierbattista.com"

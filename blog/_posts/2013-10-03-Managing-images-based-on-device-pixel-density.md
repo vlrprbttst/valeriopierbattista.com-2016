@@ -1,9 +1,10 @@
-
 I finally got to test the behavior of regular images on some retina displays today and see first hand how web images react on high pixel density displays (such as retina displays).
 
-<a href="http://valeriopierbattista.com/blog/wp-content/uploads/2015/01/ipads-1024x768.jpg"><img class="alignnone size-large wp-image-167" src="http://valeriopierbattista.com/blog/wp-content/uploads/2015/01/ipads-1024x768-1024x768.jpg" alt="ipads-1024x768" width="640" height="480" /></a>
+<img src="/images/blog/ipads.jpg" alt="ipads-1024x768" />
 
-<!--more-->I prepared an example you can <a href="http://valeriopierbattista.com/blog/wp-content/uploads/2015/01/retina-images.zip">download here</a> so you can see for yourself.
+<!--more-->
+
+I prepared an example you can <a href="/downloads/retina-images.zip">download here</a> so you can see for yourself.
 
 I decided to follow instructions from the official "<a href="https://developer.apple.com/library/safari/documentation/NetworkingInternet/Conceptual/SafariImageDeliveryBestPractices/ServingImagestoRetinaDisplays/ServingImagestoRetinaDisplays.html">Serving Images Efficiently to Displays of Varying Pixel Density</a>" article from the Apple Developer website and here's my considerations.
 <h2>What's the matter with regular images on retina displays?</h2>

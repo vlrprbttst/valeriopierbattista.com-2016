@@ -1,0 +1,13 @@
+<h3>Guest Posts</h3>
+<ul>
+  <li><a href="http://www.neomobile-blog.com/neomobile-insight-web-responsive-design/" target="_blank">Challenges of a Web Responsive Design</a> - on Neomobile Blog</li>
+  <li><a href="http://www.webhouseit.com/creare-siti-e-blog-statici-con-jekyll/" target="_blank">Creare siti e blog statici con Jekyll</a> - on Webhouse</li>
+</ul>
+
+<h3>Recent Posts</h3>
+
+<ul>
+  {% for post in site.posts limit: 5 %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

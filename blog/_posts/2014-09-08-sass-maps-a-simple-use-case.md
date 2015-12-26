@@ -8,9 +8,9 @@ I wanted to achieve something like this:
 
 <img src="/images/blog/Screenshot_1.png" alt="Screenshot_1" />
 
-That's basically two <code class="language-none">div.box</code> (I wanted more by the way, and more colors) with two different look&amp;feel based on a particular color. 
+That's basically two <code class="language-none">div.box</code> (I wanted more by the way, and more colors) with two different look&amp;feel based on a particular color.
 You have a big <code class="language-none">.bar</code> on top with a red background, an <code class="language-none">h1</code> and an <code class="language-none">a</code> of that same red color.
- The next  <code class="language-none">.box</code> is based on the same scheme, but has a green color instead. What I <strong>didn't </strong>want to do was writing endless css like 
+ The next  <code class="language-none">.box</code> is based on the same scheme, but has a green color instead. What I <strong>didn't </strong>want to do was writing endless css like
 <pre class="language-scss">
 <code class="language-scss">
 .box {
@@ -24,9 +24,8 @@ You have a big <code class="language-none">.bar</code> on top with a red backgro
       h1 {color:green}
       a {color:green}
       }
-}
-</code>
-</pre>
+}</code></pre>
+
 for every section. That's when sass maps and <a href="http://thesassway.com/intermediate/if-for-each-while">sass control directives</a> come in handy: all I want to do is reproduce that color scheme
  just by changing the class of the containing <code class="language-none">div.box</code> and rely on a simple set of color managed by a sass map. That's way more maintainable ...
 
@@ -41,8 +40,8 @@ This is my html:
   &lt;h1&gt;This is a heading &lt;/h1&gt;
   &lt;h2&gt;And this is a subtitle&lt;/h2&gt;
 &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit 
-amet quam egestas semper. Aenean ultricies mi vitae est. &lt;a href="#"&gt;Mauris placerat eleifend&lt;/a&gt; leo.&lt;/p&gt;	
+Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+amet quam egestas semper. Aenean ultricies mi vitae est. &lt;a href="#"&gt;Mauris placerat eleifend&lt;/a&gt; leo.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 this is the sass map:
@@ -58,15 +57,15 @@ And this is the handy function that does the magic:
 <pre class="language-scss">
 <code class="language-scss">   
 @each $color-class, $the-color in $color-set {
-  .box.#{$color-class} { 
+  .box.#{$color-class} {
     .bar {
       background: $the-color;
-      &amp;.darken{background:darken($the-color,5%)} 
+      &amp;.darken{background:darken($the-color,5%)}
      } //bar
-     
+
     h1, a {color:$the-color}
 
-  } //box.#{color} 
+  } //box.#{color}
 } //end of loop
     </code></pre>
 <p>

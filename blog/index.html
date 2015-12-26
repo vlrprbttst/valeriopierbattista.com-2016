@@ -3,13 +3,12 @@ layout: default
 ---
 <div class="page-container">
 	<div class="sub-container blog">
-		<h1>Blog</h1>
 		{% for post in paginator.posts %}
 		<div class="entry">
 
 			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-				<span class="date"><i class="fa fa-clock-o"></i> {{ post.date | date: "%m-%d-%Y"}}</span>
+				<span class="date"><i class="fa fa-clock-o"></i> {{ post.date | date: '%B %d, %Y'}}</span>
 
 			{{ post.excerpt }}
 			<a class="more-link" href="{{ post.url }}">continue reading <i class="fa fa-chevron-right"></i></a>
