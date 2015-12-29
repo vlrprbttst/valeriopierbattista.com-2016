@@ -34,8 +34,8 @@
     font-family: 'Source Code Pro';
   }
   $color-set: ( facebook:#3B5998, twitter: #56A3D9, linkedin: #007BB6, gplus:#D14836 );
-  $socialsize: 2.4rem;
-  $socialmargin: 0.4rem;
+  $socialsize: 2.3rem;
+  $socialmargin: 0.3rem;
   $socialcount: 4;
   @function makelongshadow($the-color) {
     $val: 0 0 $the-color;
