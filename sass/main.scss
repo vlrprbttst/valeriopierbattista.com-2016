@@ -146,6 +146,13 @@ li {
     font-family: 'Source Code Pro';
   }
 }
+
+ul li p {
+  @include adjust-font-size-to(16px,1.2);
+  @include respond-to(30) {
+    @include adjust-font-size-to(16px,1.2);
+  }
+}
 pre,
 code {
   font-family: 'Source Code Pro' !important;
