@@ -1,12 +1,12 @@
 
 <img title="jekyll and grunt boilerplate" src="/images/blog/gruntjekyll.png" alt="jekyll and grunt boilerplate"/>
 
-<strong>Jekyll </strong>is great, and it gets even better with <strong>Grunt </strong>automating repetitive tasks. I'm assuming you already know what <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
-and <a href="http://gruntjs.com/" target="_blank">Grunt</a> are. I've covered Grunt in a 
-<a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">previous blog post</a> 
-so you may want to check that out before continuing, as we will use a very similar <em>gruntfile</em>. If you never used <strong>Jekyll</strong> before, 
+<strong>Jekyll</strong> is great, and it gets even better with <strong>Grunt </strong> automating repetitive tasks. I'm assuming you already know what <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
+and <a href="http://gruntjs.com/" target="_blank">Grunt</a> are. I've covered Grunt in a
+<a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">previous blog post</a>
+so you may want to check that out before continuing, as we will use a very similar <em>gruntfile</em>. If you never used <strong>Jekyll</strong> before,
 I suggest you to read <a href="https://www.andrewmunsell.com/tutorials/jekyll-by-example" target="_blank">this great tutorial</a> before starting. Jekyll is a static site generator,
- and it's <em>"blog aware"</em>, this means it's ready to manage posts, categories, excerpts and all you need to create and maintain a modern blog without having to deal with CMS installations, theme hacking and databases. 
+ and it's <em>"blog aware"</em>, this means it's ready to manage posts, categories, excerpts and all you need to create and maintain a modern blog without having to deal with CMS installations, theme hacking and databases.
  You are in complete control here and you will have more time to focus on what really matters: <strong>your content</strong>.
 
 <!--more-->
@@ -33,7 +33,7 @@ On the other cmd, type <code class="language-shell">grunt</code>. You should see
 
 <img src="/images/blog/terminal2jekyll.png" alt="terminal2"/>
 
-A browser window should have popped up and you should see the website whose source is in our <code class="language-shell">_site</code> folder. You should also see a notification that says <strong>"Connected to BrowserSync"</strong>. 
+A browser window should have popped up and you should see the website whose source is in our <code class="language-shell">_site</code> folder. You should also see a notification that says <strong>"Connected to BrowserSync"</strong>.
 It's on! We can now explore what it's in our jekyll and grunt boilerplate.
 
 <h2>Folder structure</h2>
@@ -52,9 +52,9 @@ For clarity's sake, I've kept the project as simple as I could. You can explore 
 <i class="fa fa-check" style="color: #20ce6d;"></i> It minifies all the html in the <code class="language-shell">_site</code> folder<br>
 
 I decided not to use the <a href="https://github.com/dannygarcia/grunt-jekyll" target="_blank">grunt-jekyll</a> task because it looks like it's not maintained by the time I'm writing this, so I preferred to go the 2-cmd way.
- I won't go deeper into the <strong>gruntfile.js</strong> because it's 
- <a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">practically identical to the one described here</a>. 
- Same thing about Jekyll because I'm assuming you already have some knowledge about it. 
+ I won't go deeper into the <strong>gruntfile.js</strong> because it's
+ <a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">practically identical to the one described here</a>.
+ Same thing about Jekyll because I'm assuming you already have some knowledge about it.
  The gruntfile may have some misused settings or redundancy, if you have any suggestion on how to make it better please comment down below.
 
 Happy Jekylling!
