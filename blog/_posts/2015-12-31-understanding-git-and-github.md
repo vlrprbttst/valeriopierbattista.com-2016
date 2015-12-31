@@ -56,7 +56,7 @@ to accomplish the task. Once your code is done and you decide to push it online,
 <br> This command let's you see which files have been locally added or modified. Checking the git status is not mandatory, but may be useful to track locally modified or added files.
 - <code class="language-git">git add .</code><br>
 This is a shortcut to add all modified files to the commit you are about to perform. Type <code class="language-git">git status</code> again and you will see the index file color changed from red to green.
-- <code class="language-git">git commit -m "first commit for my test repository"</code><br>
+- <code class="language-git" style="word-wrap: break-word;">git commit -m "first commit for my test repository"</code><br>
 Commits tell the revision control system to make a group of changes final, and make the files ready to be pushed.
 - <code class="language-git">git push origin master</code><br>
 This is only needed on the first push. From now on, to push your changes to your repository master branch,
