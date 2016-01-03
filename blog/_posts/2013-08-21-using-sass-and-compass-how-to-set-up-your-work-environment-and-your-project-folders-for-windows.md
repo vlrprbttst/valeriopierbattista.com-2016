@@ -1,5 +1,5 @@
 
-<img src="/images/blog/sass_compass.png" alt="sass_compass" />
+<img src="/images/blog/sass_compass.png" alt="sass_compass" class="cover" />
 
 One thing that took me a lot of time to figure out was how to set up my computer to be able to start using sass and compass and how to create and configure my project folder. For a newbie it’s quite hard to figure out what you really need to do to make the whole thing work and start using. If you’re reading this you already know what sass and compass are so let’s go straight to the point.
 

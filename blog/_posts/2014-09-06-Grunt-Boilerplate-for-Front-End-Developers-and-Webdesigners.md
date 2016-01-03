@@ -1,5 +1,5 @@
 
-<img src="/images/blog/grunt-logo.svg" alt="grunt-logo" style="float:left;width:200px;margin:0 20px 0 0" />
+<img src="/images/blog/grunt-logo.svg" alt="grunt-logo" style="float:left;width:200px;margin:0 20px 0 0" class="cover" />
 This is a grunt boilerplate I developed and assembled for my needs. I’ve been looking around for something like this but couldn’t find it, that’s why I decided to share my achievement on my blog.
  If it’s your first read about grunt, please read this first instead: <a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">http://24ways.org/2013/grunt-is-not-weird-and-hard/</a> - this is a quite comprehensive guide on
  how to get started, what to install before using grunt on your machine, and it’s useful for the overall understanding of the basic concepts. I strongly recommend to start with that article before further reading.

@@ -3,7 +3,7 @@
 <p dir="ltr"><strong>Note:</strong> This is the italian translation of the brilliant article “<a href="http://stilldrinking.org/programming-sucks" target="_blank">Programming Sucks</a>” by <a href="http://stilldrinking.org/" target="_blank">Peter Welsh</a>. This article was so funny to read that i decided to translate it in my native language and share it on my blog.</p>
 
 <h2>Programmare fa schifo</h2>
-<img class="alignnone" src="http://stilldrinking.org/blog_images/code-horror.gif" alt="" width="600" height="394" />
+<img class="alignnone" src="http://stilldrinking.org/blog_images/code-horror.gif" alt="" width="600" height="394" class="cover" />
 <p dir="ltr">Ogni amico che ho che abbia un lavoro che implichi uno sforzo maggiore di sollevare un laptop un paio di volte a settimana trova sempre il modo di infilare in una qualsiasi conversazione frasi tipo: "amico mio, tu non lavori sodo. Ho appena finito una settimana di 4700 ore di lavoro a scavare un tunnel sotto Mordor con un cacciavite"</p>
 <p dir="ltr"><!--more--></p>
 <p dir="ltr">Da una parte hanno ragione. Mordor fa cagare, ed è sicuramente un lavoro più stancante fisicamente che picchettare su una tastiera, a meno che tu non sia una formica. A parte tutto, siamo comunque tutti d'accordo sul fatto che stress e pazzia siano cose negative? Ottimo. Benvenuti nel mondo della programmazione.</p>

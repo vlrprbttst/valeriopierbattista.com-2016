@@ -1,7 +1,7 @@
 
-<img title="jekyll and grunt boilerplate" src="/images/blog/gruntjekyll.png" alt="jekyll and grunt boilerplate"/>
+<img title="jekyll and grunt boilerplate" src="/images/blog/gruntjekyll.png" alt="jekyll and grunt boilerplate" class="cover"/>
 
-<strong>Jekyll</strong> is great, and it gets even better with <strong>Grunt </strong> automating repetitive tasks. I'm assuming you already know what <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
+<strong>Jekyll</strong> is great, and it gets even better with <strong>Grunt </strong> automating repetitive tasks. I'm assuming you already know what <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
 and <a href="http://gruntjs.com/" target="_blank">Grunt</a> are. I've covered Grunt in a
 <a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">previous blog post</a>
 so you may want to check that out before continuing, as we will use a very similar <em>gruntfile</em>. If you never used <strong>Jekyll</strong> before,

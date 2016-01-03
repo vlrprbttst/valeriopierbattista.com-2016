@@ -1,4 +1,4 @@
-<img src="/images/blog/prepros.png" alt="optimized-by-tinypng" style="width:200px;float:left;margin-right:20px" />
+<img src="/images/blog/prepros.png" alt="optimized-by-tinypng" style="width:200px;float:left;margin-right:20px" class="cover" />
 
 No more command line non-sense with Prepros! YAY! One thing i love about Prepros is how easy it is: just add a project, specify where your sass, js and html files are and you are good to go, Prepros will compile the rest. And it compiles HAML too! Gettingstarted is easy and <a href="http://alphapixels.com/prepros/docs/" target="_blank">the official documentation</a> is pretty complete,  i've learnt how to use the software lightning-fast reading the docs section of the website. In this post i will highlight the features I think are the most interesting.
 

@@ -1,7 +1,7 @@
 
-<img src="/images/blog/seal-color-aef0354c-150x150.png" style="width:120px;height:auto;float:left; margin-right:20px" alt="sass mixin" />
+<img src="/images/blog/seal-color-aef0354c-150x150.png" style="width:120px;height:auto;float:left; margin-right:20px" alt="sass mixin" class="cover" />
 
-Everytime I create a new project, I always begin with some kind of starter-kit that includes the basics every 
+Everytime I create a new project, I always begin with some kind of starter-kit that includes the basics every
 project should have. I'm talking about an html5 index file for example, a folder structure I usually tend to use,
 my <a title="Grunt Boilerplate for Front End Developers and Webdesigners" href="http://valeriopierbattista.com/blog/grunt-boilerplate-for-front-end-developers-and-webdesigners/">grunt boilerplate</a> files etc.
 Today I want to share what's in my <code class="markup">_mixin.scss</code> file: a selection of just <strong>four useful mixins</strong> I think every front-end developer should consider using.

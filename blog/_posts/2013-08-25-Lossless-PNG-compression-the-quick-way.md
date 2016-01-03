@@ -1,5 +1,5 @@
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/1/17/PNG-Gradient_hex.png" alt="png format" />
+<img src="http://upload.wikimedia.org/wikipedia/commons/1/17/PNG-Gradient_hex.png" alt="png format" class="cover" />
 
 Portable Network Graphics (PNG) is a raster graphics file format that supports lossless data compression. PNG was created as an improved, non-patented replacement for Graphics Interchange Format (GIF), and is the most used lossless image compression format on the World Wide Web.
 

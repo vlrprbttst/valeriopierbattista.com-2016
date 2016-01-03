@@ -1,4 +1,13 @@
 .blog {
+    img {
+        border:1px solid lightgrey;
+        padding:rhythm(.5);
+
+        &.cover {
+            border:0;
+            padding: 0;
+        }
+    }
   .entry {
     background: $textPrimaryColor;
     padding: rhythm(1) rhythm(2);

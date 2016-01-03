@@ -1,4 +1,4 @@
-<img alt="responsive webdesign" src="/images/blog/responsive-webdesign.png" />
+<img alt="responsive webdesign" src="/images/blog/responsive-webdesign.png" class="cover" />
 
 We're hearing a lot about **responsive web** and **responsive web design** lately, but what is it exactly? And why is it so important?  Let's dig deeper and try to make it simple, starting from the beginning, before smartphones and tablets even existed.
 

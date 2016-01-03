@@ -1,6 +1,6 @@
 I finally got to test the behavior of regular images on some retina displays today and see first hand how web images react on high pixel density displays (such as retina displays).
 
-<img src="/images/blog/ipads.jpg" alt="ipads-1024x768" />
+<img src="/images/blog/ipads.jpg" alt="ipads-1024x768" class="cover" />
 
 <!--more-->
 

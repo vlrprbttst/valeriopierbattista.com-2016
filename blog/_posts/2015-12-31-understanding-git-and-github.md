@@ -1,4 +1,4 @@
-<img src="/images/blog/github.jpg">
+<img src="/images/blog/github.jpg" class="cover">
 
 Understanding what Git and Github are is one important step in the life of a developer. I used to keep my projects and files on my computer hard drive and **I had no way
 of accessing them from any other location different from home**. Github let's you *push* your codebase online and makes it accessible from any remote location, which can be anything: from your work's computer to your friend's for example.
